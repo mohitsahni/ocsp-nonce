@@ -186,15 +186,15 @@ Internet-Draft            OCSP Nonce Extension            September 2020
 
 3.2.  Nonce Collision
 
-   If the value of the nonce used by a client in OCSP request is
+   If the value of nonce used by a client in OCSP request is
    predictable, then an attacker may prefetch responses with the
    predicted nonce and can replay them, thus defeating the purpose of
    using nonce.  Therefore the value of Nonce extension in the OCSP
    request MUST contain cryptographically strong randomness and MUST be
    freshly generated at the time of creating the OCSP request.  Also if
-   the length of the nonce in the Nonce extension is too small e.g. 1
-   octet then an on-path attacker can prefetch responses with all the
-   possible values of the nonce and replay a matching nonce.
+   the length of nonce is too small e.g. 1 octet then an on-path
+   attacker can prefetch responses with all the possible values of nonce
+   and replay a matching nonce.
 
 4.  IANA Considerations
 
