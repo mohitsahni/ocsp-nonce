@@ -85,14 +85,14 @@ Table of Contents
    This document updates the usage and format of the Nonce extension
    used in OCSP request and response messages.  This extension was
    previously defined in section 4.4.1 of [RFC6960].  [RFC6960] does not
-   mention any minimum and maximum length of the nonce extension.
-   Lacking limits on the length of the Nonce extension, an OCSP
-   responders that follow [RFC6960] may be vulnerable to various attacks
-   like Denial of Service attacks [RFC4732], chosen prefix attacks to
-   get a desired signature, and possible evasions using the Nonce
-   extension data.  This document specifies a lower limit of 1 and an
-   upper limit of 32 to the length of Nonce extension.  This document
-   updates [RFC6960].
+   mention any minimum and maximum length of nonce in the Nonce
+   extension.  Lacking limits on the length of nonce in the Nonce
+   extension, an OCSP responders that follow [RFC6960] may be vulnerable
+   to various attacks like Denial of Service attacks [RFC4732], chosen
+   prefix attacks to get a desired signature, and possible evasions
+   using the Nonce extension data.  This document specifies a lower
+   limit of 1 and an upper limit of 32 to the length of nonce in the
+   Nonce extension.  This document updates [RFC6960].
 
 1.1.  Terminology
 
@@ -134,18 +134,19 @@ Internet-Draft            OCSP Nonce Extension            September 2020
    If Nonce extension is present then the length of nonce MUST be at
    least 1 octet and can be up to 32 octets.
 
-   A server MUST reject any OCSP request having a Nonce extension with
-   length of 0 octets or more than 32 octets with the malformedRequest
-   OCSPResponseStatus as described in section 4.2.1 of [RFC6960].
+   A server MUST reject any OCSP request having a nonce in the Nonce
+   extension with length of 0 octets or more than 32 octets with the
+   malformedRequest OCSPResponseStatus as described in section 4.2.1 of
+   [RFC6960].
 
    The value of the nonce MUST be generated using a cryptographically
    strong pseudorandom number generator (see [RFC4086]).  The minimum
    nonce length of 1 octet is defined to provide backward compatibility
    with older clients that follow [RFC6960].  Newer OCSP clients that
-   support this document MUST use a length of 32 octets for the Nonce
-   extension.  OCSP responders MUST accept lengths of at least 16
+   support this document MUST use a length of 32 octets for the nonce in
+   Nonce extension.  OCSP responders MUST accept lengths of at least 16
    octets, and MAY choose to ignore the Nonce extension for requests
-   where the length of the Nonce extension is less than 16 octets
+   where the length of the nonce is less than 16 octets
 
       id-pkix-ocsp           OBJECT IDENTIFIER ::= { id-ad-ocsp }
       id-pkix-ocsp-nonce     OBJECT IDENTIFIER ::= { id-pkix-ocsp 2 }
@@ -162,7 +163,6 @@ Internet-Draft            OCSP Nonce Extension            September 2020
    Including client's Nonce value in the OCSP response makes sure that
    the response is the latest response from the server and not an old
    copy.
-
 
 
 
@@ -192,9 +192,9 @@ Internet-Draft            OCSP Nonce Extension            September 2020
    using nonce.  Therefore the value of Nonce extension in the OCSP
    request MUST contain cryptographically strong randomness and MUST be
    freshly generated at the time of creating the OCSP request.  Also if
-   the length of the Nonce extension is too small e.g. 1 octet then an
-   on-path attacker can prefetch responses with all the possible values
-   of the nonce and replay a matching nonce.
+   the length of the nonce in the Nonce extension is too small e.g. 1
+   octet then an on-path attacker can prefetch responses with all the
+   possible values of the nonce and replay a matching nonce.
 
 4.  IANA Considerations
 
