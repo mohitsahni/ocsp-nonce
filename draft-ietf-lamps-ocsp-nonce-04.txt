@@ -4,9 +4,9 @@
 
 LAMPS                                                      M. Sahni, Ed.
 Internet-Draft                                        Palo Alto Networks
-Updates: 6960 (if approved)                            September 5, 2020
+Updates: 6960 (if approved)                           September 10, 2020
 Intended status: Standards Track
-Expires: March 9, 2021
+Expires: March 14, 2021
 
 
                           OCSP Nonce Extension
@@ -14,8 +14,8 @@ Expires: March 9, 2021
 
 Abstract
 
-   This document specifies the updated format of Nonce extension in the
-   Online Certificate Status Protocol (OCSP) request and response
+   This document specifies the updated format of the Nonce extension in
+   the Online Certificate Status Protocol (OCSP) request and response
    messages.  OCSP is used to check the status of a certificate and the
    Nonce extension is used to cryptographically bind an OCSP response
    message to a particular OCSP request message.  This document updates
@@ -36,7 +36,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on March 9, 2021.
+   This Internet-Draft will expire on March 14, 2021.
 
 Copyright Notice
 
@@ -53,9 +53,8 @@ Copyright Notice
 
 
 
-Sahni                     Expires March 9, 2021                 [Page 1]
-
-
+Sahni                    Expires March 14, 2021                 [Page 1]
+
 Internet-Draft            OCSP Nonce Extension            September 2020
 
 
@@ -110,9 +109,8 @@ Table of Contents
 
 
 
-Sahni                     Expires March 9, 2021                 [Page 2]
-
-
+Sahni                    Expires March 14, 2021                 [Page 2]
+
 Internet-Draft            OCSP Nonce Extension            September 2020
 
 
@@ -167,9 +165,8 @@ Internet-Draft            OCSP Nonce Extension            September 2020
 
 
 
-Sahni                     Expires March 9, 2021                 [Page 3]
-
-
+Sahni                    Expires March 14, 2021                 [Page 3]
+
 Internet-Draft            OCSP Nonce Extension            September 2020
 
 
@@ -224,9 +221,8 @@ Internet-Draft            OCSP Nonce Extension            September 2020
 
 
 
-Sahni                     Expires March 9, 2021                 [Page 4]
-
-
+Sahni                    Expires March 14, 2021                 [Page 4]
+
 Internet-Draft            OCSP Nonce Extension            September 2020
 
 
@@ -281,9 +277,8 @@ Internet-Draft            OCSP Nonce Extension            September 2020
 
 
 
-Sahni                     Expires March 9, 2021                 [Page 5]
-
-
+Sahni                    Expires March 14, 2021                 [Page 5]
+
 Internet-Draft            OCSP Nonce Extension            September 2020
 
 
@@ -338,4 +333,4 @@ Author's Address
 
 
 
-Sahni                     Expires March 9, 2021                 [Page 6]
+Sahni                    Expires March 14, 2021                 [Page 6]
